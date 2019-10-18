@@ -1,12 +1,15 @@
 package com.sinothk.view.horizontalView;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -57,12 +60,12 @@ public class HorizontalView<T> extends HorizontalScrollView {
                 }
             });
 
-            // ====================================
-            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            // ==================================== ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT
+            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(holderView.getWidth(), holderView.getHeight());
             if (i == 0) {
-                lp.setMargins(20, 20, 20, 20);
+                lp.setMargins(holderView.getMargin(), holderView.getMargin(), holderView.getMargin(), holderView.getMargin());
             } else {
-                lp.setMargins(0, 20, 20, 20);
+                lp.setMargins(0, holderView.getMargin(), holderView.getMargin(), holderView.getMargin());
             }
             itemView.setLayoutParams(lp);
             linearLayout.addView(itemView, i);
@@ -76,6 +79,12 @@ public class HorizontalView<T> extends HorizontalScrollView {
     public interface HolderView {
 
         int getLayoutResId();
+
+        int getWidth();
+
+        int getHeight();
+
+        int getMargin();
 
         void bindingData(View view, Object obj);
 

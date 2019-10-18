@@ -28,10 +28,38 @@ public class MainActivity extends AppCompatActivity {
         data.add("绿植养殖");
         data.add("宠物喂养");
 
+//        data.add("A");
+//        data.add("A");
+//        data.add("A");
+//        data.add("A");
+//        data.add("A");
+//        data.add("A");
+//        data.add("A");
+//        data.add("A");
+//        data.add("A");
+//        data.add("A");
+//        data.add("A");
+
+
         horizontalView.setData(data, new HorizontalView.HolderView() {
             @Override
             public int getLayoutResId() {
                 return R.layout.item_layout;
+            }
+
+            @Override
+            public int getWidth() {
+                return 250;
+            }
+
+            @Override
+            public int getHeight() {
+                return 250;
+            }
+
+            @Override
+            public int getMargin() {
+                return 16;
             }
 
             @Override
