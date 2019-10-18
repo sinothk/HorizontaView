@@ -1,4 +1,4 @@
-package com.sinothk.view.horizontaView;
+package com.sinothk.view.horizontalView.demo;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.sinothk.view.horizontaView.test", appContext.getPackageName());
+        assertEquals("com.sinothk.view.horizontalView.demo", appContext.getPackageName());
     }
 }

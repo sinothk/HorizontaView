@@ -1,2 +1,2 @@
-include ':app', ':HorizontaView'
-rootProject.name='HorizontaViewLib'
+include ':app', ':HorizontalView'
+rootProject.name='horizontalViewLib'

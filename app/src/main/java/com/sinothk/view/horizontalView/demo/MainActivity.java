@@ -1,4 +1,4 @@
-package com.sinothk.view.horizontaView.demo;
+package com.sinothk.view.horizontalView.demo;
 
 import androidx.appcompat.app.AppCompatActivity;
 

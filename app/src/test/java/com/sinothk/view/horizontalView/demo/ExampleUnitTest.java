@@ -1,4 +1,4 @@
-package com.sinothk.view.horizontaView;
+package com.sinothk.view.horizontalView.demo;
 
 import org.junit.Test;
 
