@@ -1,4 +1,4 @@
-package com.sinothk.view.horizontalView.demo;
+package com.sinothk.view.horizontalView;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -9,7 +9,6 @@ import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class HorizontalView<T> extends HorizontalScrollView {
 

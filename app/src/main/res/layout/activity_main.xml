@@ -6,7 +6,7 @@
     android:orientation="vertical"
     tools:context="com.sinothk.view.horizontalView.demo.MainActivity">
 
-    <com.sinothk.view.horizontalView.demo.HorizontalView
+    <com.sinothk.view.horizontalView.HorizontalView
         android:id="@+id/horizontalView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.sinothk.view.horizontalView.HorizontalView;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
