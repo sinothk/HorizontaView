@@ -3,6 +3,11 @@ package com.sinothk.view.horizontalView.demo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,8 +16,34 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        HorizontalView horizontalView = findViewById(R.id.horizontalView);
-        horizontalView.initView(this);
+        HorizontalView<String> horizontalView = findViewById(R.id.horizontalView);
+        ArrayList<String> data = new ArrayList<>();
+        data.add("全部分类");
+        data.add("生活小记");
+        data.add("绿植养殖");
+        data.add("宠物喂养");
+        data.add("生活小记");
+        data.add("绿植养殖");
+        data.add("宠物喂养");
 
+        horizontalView.setData(data, new HorizontalView.HolderView() {
+            @Override
+            public int getLayoutResId() {
+                return R.layout.item_layout;
+            }
+
+            @Override
+            public void bindingData(View view, Object obj) {
+                TextView tv = view.findViewById(R.id.tv);
+                String value = (String) obj;
+                tv.setText(value);
+            }
+
+            @Override
+            public void onItemClickListener(int position, Object obj) {
+                String v = (String) obj;
+                Toast.makeText(MainActivity.this, "v = " + v, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
